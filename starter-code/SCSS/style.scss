@@ -1,6 +1,8 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+//Global styles
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -23,6 +25,14 @@ p {
     @include text-preset-4;
 }
 
+.vertical-line {
+    @include vertical-line;
+}
+
+.section-number {
+    @include section-number;
+}
+
 .button-blue {
     @include button($cyan-600, $white);
     
@@ -33,7 +43,13 @@ p {
 
 .button-purple {
     @include button($purple-600, $white);
+
+    .version {
+        color: $purple-300;
+    }
 }
+
+// Content styles
 
 .hero-wrap {
 
@@ -67,8 +83,6 @@ p {
                 @include text-preset-1;
             }
 
-            
-
             .hero-buttons {
                 display: flex;
                 gap: 1.063rem;
@@ -79,7 +93,6 @@ p {
             grid-area: 1 / 3 / 2 / 4;
             margin-right: -$space-1400;
         }
-
 }
 }
 
@@ -89,14 +102,6 @@ p {
     max-width: 90rem;
     align-items: center;
     margin: $space-700 $space-1000 $space-900;
-
-    .vertical-line {
-    @include vertical-line;
-    }
-
-    .section-number {
-    @include section-number;
-    }
 
     .image-gallery {
         display: grid;
@@ -130,4 +135,63 @@ p {
   
 }
 
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin-top: auto;
 
+    .vertical-line, .section-number {
+        z-index: 3;
+    }
+
+    .section-number {
+        background-color: $white;
+    }
+
+
+    .footer-article {
+        height: 19.5rem;
+        width: 100%;
+        margin-top: -1.75rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $space-400;
+        padding: $space-1400 ($space-1000*2);
+        background-image: url(../assets/desktop/image-footer.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 2;
+        
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: hsl(192, 37%, 48%, 0.8);
+            z-index: 0;
+        }
+
+        h3, p, button {
+            position: relative;
+            z-index: 1;
+            width: auto;
+            justify-self: center;
+            align-self: center;
+        }
+
+        h3 {
+            @include text-preset-2;
+            color: $white;
+        }
+
+        p {
+            color: $white;
+        }
+       
+    }
+}
