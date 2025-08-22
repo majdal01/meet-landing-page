@@ -78,7 +78,9 @@ body {
             margin-right: -$space-1400;
         }
 
-
 }
 }
 
+.section-number {
+    @include section-number;
+}

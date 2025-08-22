@@ -64,3 +64,17 @@
         background-color: lighten($background-color, 5%);
     }
 }
+
+// Section number
+
+@mixin section-number {
+    display: flex;
+    border: 1px solid $slate-300;
+    border-radius: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+    align-items: center;
+    justify-content: center;
+    color: $slate-600;
+    @include text-preset-5;
+}
