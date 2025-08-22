@@ -19,6 +19,10 @@ body {
     margin-right: auto;
 }
 
+p {          
+    @include text-preset-4;
+}
+
 .button-blue {
     @include button($cyan-600, $white);
     
@@ -63,9 +67,7 @@ body {
                 @include text-preset-1;
             }
 
-            p {
-                @include text-preset-4;
-            }
+            
 
             .hero-buttons {
                 display: flex;
@@ -81,6 +83,51 @@ body {
 }
 }
 
-.section-number {
+.main-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 90rem;
+    align-items: center;
+    margin: $space-700 $space-1000 $space-900;
+
+    .vertical-line {
+    @include vertical-line;
+    }
+
+    .section-number {
     @include section-number;
+    }
+
+    .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        margin: $space-800 auto;
+
+        img {
+            border-radius: 2%;
+            height: 16rem;
+            width: 100%;
+        }
+    }
+
+    .main-text {
+        text-align: center;
+        max-width: 34rem;
+
+        h2 {
+            @include text-preset-3;
+            margin-bottom: $space-200;
+        }
+
+        h3 {
+            @include text-preset-2;
+            margin-bottom: $space-400;
+            padding: 0 $space-900;
+        }
+
+    }
+  
 }
+
+
