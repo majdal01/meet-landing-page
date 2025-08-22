@@ -45,3 +45,30 @@
     letter-spacing: 0px;
     color: $slate-900;
 }
+
+//Buttons
+
+//Blue button
+
+@mixin button-blue {
+    background-color: $cyan-600;
+    padding: $space-200 $space-500;
+    border-radius: 25px;
+    color: $white;
+
+
+    &:hover {
+        background-color: lighten($cyan-600, 5%);
+    }
+}
+
+@mixin button-purple {
+    background-color: $purple-600;
+    padding: $space-200 $space-500;
+    border-radius: 25px;
+    color: $white;
+
+    &:hover {
+        background-color: lighten($purple-600, 5%);
+    }
+}
