@@ -133,7 +133,7 @@ p {
         h3 {
             @include text-preset-2;
             margin-bottom: $space-400;
-            padding: 0 $space-900;
+            
         }
 
     }
@@ -158,13 +158,14 @@ p {
 
 
     .footer-article {
-        height: 19.5rem;
+        min-height: 19.5rem;
+        height: auto;
         width: 100%;
         margin-top: -1.75rem;
         display: flex;
         justify-content: space-between;
         gap: $space-400;
-        padding: $space-1400 ($space-1400);
+        padding: $space-1400 $space-1000;
         background-image: url(../assets/desktop/image-footer.jpg);
         background-size: cover;
         background-position: center;
@@ -270,7 +271,7 @@ p {
     }
 
     .main-content {
-        //margin: $space-700 $space-400 $space-800;
+     
 
         .main-text {
             h2 {
@@ -288,10 +289,17 @@ p {
         display: flex;
         flex-direction: column;
         padding: $space-800 6rem;
+        min-height: 20rem;
+        height: auto;
         
         h3 {
             @include tablet-text-preset-2;
             color: $white;
+            max-width: 100%;
+        }
+
+        p {
+            max-width: 85%;
         }
 
         h3, p {
@@ -305,3 +313,89 @@ p {
     
 }
 
+
+@media (max-width: 375px) {
+
+    body {
+        margin-top: 2rem;
+    }
+
+    h1 {
+        @include mobile-text-preset-1;
+    }
+
+    h2 {
+        @include mobile-text-preset-2;
+    }
+
+    h3 {
+        @include mobile-text-preset-3;
+    }
+
+    .hero-wrap {
+
+        .hero {
+            margin-bottom: $space-400;
+
+            .hero-content {
+                max-width: 20rem;
+                
+                h1 {
+                    @include mobile-text-preset-1;
+                }
+
+                .hero-buttons {
+                    flex-direction: column;
+                }
+            } 
+        }
+    }
+
+    .main-content {
+        margin: $space-400 $space-400 $space-800;
+        
+        .image-gallery {
+            grid-template-columns: repeat(2, 1fr);
+            gap: $space-200;
+        }
+
+        .main-text {
+            
+            h2 {
+                @include mobile-text-preset-3;
+            }
+            h3 {
+                @include mobile-text-preset-2;
+                padding: 0;
+            }
+        }
+    }
+
+    .footer-content {
+
+        .footer-article {
+        display: flex;
+        flex-direction: column;
+        padding: $space-700 $space-400;
+        height: 23.375rem;
+        
+        h3 {
+            @include mobile-text-preset-2;
+            color: $white;
+            max-width: 100%;
+        }
+
+        p {
+            max-width: 100%;
+        }
+
+        h3, p {
+            text-align: center;
+           
+        }
+
+        }
+
+    }
+    
+}

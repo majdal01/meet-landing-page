@@ -172,7 +172,6 @@ p {
   letter-spacing: 0;
   color: hsl(240, 21%, 20%);
   margin-bottom: 2rem;
-  padding: 0 4.2rem;
 }
 
 .footer-content {
@@ -190,13 +189,14 @@ p {
   background-color: hsl(0, 0%, 98%);
 }
 .footer-content .footer-article {
-  height: 19.5rem;
+  min-height: 19.5rem;
+  height: auto;
   width: 100%;
   margin-top: -1.75rem;
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  padding: 7rem 7rem;
+  padding: 7rem 5rem;
   background-image: url(../assets/desktop/image-footer.jpg);
   background-size: cover;
   background-position: center;
@@ -326,6 +326,8 @@ p {
     display: flex;
     flex-direction: column;
     padding: 4rem 6rem;
+    min-height: 20rem;
+    height: auto;
   }
   .footer-content .footer-article h3 {
     font-family: "Red Hat Display", sans-serif;
@@ -335,6 +337,104 @@ p {
     letter-spacing: 0;
     color: hsl(240, 21%, 20%);
     color: hsl(0, 0%, 98%);
+    max-width: 100%;
+  }
+  .footer-content .footer-article p {
+    max-width: 85%;
+  }
+  .footer-content .footer-article h3, .footer-content .footer-article p {
+    text-align: center;
+  }
+}
+@media (max-width: 375px) {
+  body {
+    margin-top: 2rem;
+  }
+  h1 {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 110%;
+    letter-spacing: 0px;
+    color: hsl(240, 21%, 20%);
+  }
+  h2 {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 110%;
+    letter-spacing: 0;
+    color: hsl(240, 21%, 20%);
+  }
+  h3 {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 110%;
+    letter-spacing: 4px;
+    color: hsl(192, 37%, 48%);
+    text-transform: uppercase;
+  }
+  .hero-wrap .hero {
+    margin-bottom: 2rem;
+  }
+  .hero-wrap .hero .hero-content {
+    max-width: 20rem;
+  }
+  .hero-wrap .hero .hero-content h1 {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 110%;
+    letter-spacing: 0px;
+    color: hsl(240, 21%, 20%);
+  }
+  .hero-wrap .hero .hero-content .hero-buttons {
+    flex-direction: column;
+  }
+  .main-content {
+    margin: 2rem 2rem 4rem;
+  }
+  .main-content .image-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .main-content .main-text h2 {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 110%;
+    letter-spacing: 4px;
+    color: hsl(192, 37%, 48%);
+    text-transform: uppercase;
+  }
+  .main-content .main-text h3 {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 110%;
+    letter-spacing: 0;
+    color: hsl(240, 21%, 20%);
+    padding: 0;
+  }
+  .footer-content .footer-article {
+    display: flex;
+    flex-direction: column;
+    padding: 3.5rem 2rem;
+    height: 23.375rem;
+  }
+  .footer-content .footer-article h3 {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 110%;
+    letter-spacing: 0;
+    color: hsl(240, 21%, 20%);
+    color: hsl(0, 0%, 98%);
+    max-width: 100%;
+  }
+  .footer-content .footer-article p {
+    max-width: 100%;
   }
   .footer-content .footer-article h3, .footer-content .footer-article p {
     text-align: center;
