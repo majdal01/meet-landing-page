@@ -1,6 +1,6 @@
 @use "variables" as *;
 
-// Text presets
+// Text presets desktop
 
 @mixin text-preset-1 {
     font-family: $font-family;
@@ -47,9 +47,78 @@
     letter-spacing: 0px;
 }
 
-//Buttons
+//Text preset tablet
 
-//Blue button
+@mixin tablet-text-preset-1 {
+    font-family: $font-family;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 110%;
+    letter-spacing: 0px;
+    color: $slate-900;
+}
+
+@mixin tablet-text-preset-2 {
+    font-family: $font-family;
+    font-weight: bold;
+    font-size: 2.25rem;
+    line-height: 110%;
+    letter-spacing: 0;
+    color: $slate-900;
+}
+
+@mixin tablet-text-preset-3 {
+    font-family: $font-family;
+    font-weight: bold;
+    font-size: 0.875rem;
+    line-height: 110%;
+    letter-spacing: 4px;
+    color: $cyan-600;
+    text-transform:uppercase;
+}
+
+@mixin tablet-text-preset-4 {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 150%;
+    letter-spacing: 0px;
+    color: $slate-900;
+}
+
+//Text preset mobile
+
+@mixin mobile-text-preset-1 {
+    font-family: $font-family;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 110%;
+    letter-spacing: 0px;
+    color: $slate-900;
+}
+
+@mixin mobile-text-preset-2 {
+    font-family: $font-family;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 110%;
+    letter-spacing: 0;
+    color: $slate-900;
+}
+
+@mixin mobile-text-preset-3 {
+    font-family: $font-family;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 110%;
+    letter-spacing: 4px;
+    color: $cyan-600;
+    text-transform:uppercase;
+}
+
+
+
+//Button
 
 @mixin button($background-color, $color) {
     background-color: $background-color;
@@ -57,6 +126,7 @@
     border-radius: 50px;
     color: $color;
     border: none;
+    white-space: nowrap;
     @include text-preset-5;
 
 

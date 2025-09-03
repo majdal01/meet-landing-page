@@ -53,6 +53,7 @@ p {
   border-radius: 50px;
   color: hsl(0, 0%, 98%);
   border: none;
+  white-space: nowrap;
   font-family: "Red Hat Display", sans-serif;
   font-weight: bold;
   font-size: 1rem;
@@ -72,6 +73,7 @@ p {
   border-radius: 50px;
   color: hsl(0, 0%, 98%);
   border: none;
+  white-space: nowrap;
   font-family: "Red Hat Display", sans-serif;
   font-weight: bold;
   font-size: 1rem;
@@ -95,6 +97,7 @@ p {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   margin: 4rem;
+  gap: 0 2rem;
 }
 .hero-wrap .hero .hero-left {
   grid-area: 1/1/2/2;
@@ -125,6 +128,9 @@ p {
   grid-area: 1/3/2/4;
   margin-right: -7rem;
 }
+.hero-wrap .hero .image-pair {
+  display: none;
+}
 
 .main-content {
   display: flex;
@@ -141,7 +147,7 @@ p {
 }
 .main-content .image-gallery img {
   border-radius: 2%;
-  height: 16rem;
+  max-height: 16rem;
   width: 100%;
 }
 .main-content .main-text {
@@ -187,10 +193,10 @@ p {
   height: 19.5rem;
   width: 100%;
   margin-top: -1.75rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-between;
   gap: 2rem;
-  padding: 7rem 10rem;
+  padding: 7rem 7rem;
   background-image: url(../assets/desktop/image-footer.jpg);
   background-size: cover;
   background-position: center;
@@ -209,7 +215,7 @@ p {
   position: relative;
   z-index: 1;
   width: auto;
-  justify-self: center;
+  justify-self: end;
   align-self: center;
 }
 .footer-content .footer-article h3 {
@@ -220,9 +226,119 @@ p {
   letter-spacing: 0;
   color: hsl(240, 21%, 20%);
   color: hsl(0, 0%, 98%);
+  max-width: 22.188rem;
 }
 .footer-content .footer-article p {
   color: hsl(0, 0%, 98%);
+  max-width: 22.188rem;
+}
+.footer-content .footer-article button {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin-top: 3rem;
+  }
+  h1 {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 110%;
+    letter-spacing: 0px;
+    color: hsl(240, 21%, 20%);
+  }
+  h2 {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: bold;
+    font-size: 2.25rem;
+    line-height: 110%;
+    letter-spacing: 0;
+    color: hsl(240, 21%, 20%);
+  }
+  h3 {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: bold;
+    font-size: 0.875rem;
+    line-height: 110%;
+    letter-spacing: 4px;
+    color: hsl(192, 37%, 48%);
+    text-transform: uppercase;
+  }
+  p {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 150%;
+    letter-spacing: 0px;
+    color: hsl(240, 21%, 20%);
+  }
+  .hero-wrap .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .hero-wrap .hero .hero-left, .hero-wrap .hero .hero-right {
+    display: none;
+  }
+  .hero-wrap .hero .image-pair {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 3.5rem;
+  }
+  .hero-wrap .hero .image-pair img {
+    width: 75%;
+    max-width: none;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+  .hero-wrap .hero .hero-content {
+    max-width: 27.5rem;
+  }
+  .hero-wrap .hero .hero-content h1 {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 110%;
+    letter-spacing: 0px;
+    color: hsl(240, 21%, 20%);
+  }
+  .main-content .main-text h2 {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: bold;
+    font-size: 0.875rem;
+    line-height: 110%;
+    letter-spacing: 4px;
+    color: hsl(192, 37%, 48%);
+    text-transform: uppercase;
+  }
+  .main-content .main-text h3 {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: bold;
+    font-size: 2.25rem;
+    line-height: 110%;
+    letter-spacing: 0;
+    color: hsl(240, 21%, 20%);
+  }
+  .footer-content .footer-article {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 6rem;
+  }
+  .footer-content .footer-article h3 {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: bold;
+    font-size: 2.25rem;
+    line-height: 110%;
+    letter-spacing: 0;
+    color: hsl(240, 21%, 20%);
+    color: hsl(0, 0%, 98%);
+  }
+  .footer-content .footer-article h3, .footer-content .footer-article p {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
